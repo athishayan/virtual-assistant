@@ -9,15 +9,11 @@ client = wolframalpha.Client(app_id)
 
 class MyFrame(wx.Frame):
     def __init__(self):
-        wx.Frame.__init__(self, None,
-            pos=wx.DefaultPosition, size=wx.Size(450, 100),
-            style=wx.MINIMIZE_BOX | wx.SYSTEM_MENU | wx.CAPTION |
-             wx.CLOSE_BOX | wx.CLIP_CHILDREN,
-            title="Sahayak")  #your assistant name
+        wx.Frame.__init__(self, None, pos=wx.DefaultPosition, size=wx.Size(550, 100), style=wx.MINIMIZE_BOX | wx.SYSTEM_MENU | wx.CAPTION | wx.CLOSE_BOX | wx.CLIP_CHILDREN, title="Sahayak")  #your assistant name
         panel = wx.Panel(self)
         my_sizer = wx.BoxSizer(wx.VERTICAL)
         lbl = wx.StaticText(panel,
-        label="Hello I am Sahayak your Digital Assistant. How can I help you?")  #your assistant name
+        label="Hello I am Sahayak your Digital Assistant, How can I help you?")  #your assistant name
         my_sizer.Add(lbl, 0, wx.ALL, 5)
         self.txt = wx.TextCtrl(panel, style=wx.TE_PROCESS_ENTER,size=(400,30))
         self.txt.SetFocus()
